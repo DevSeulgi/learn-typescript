@@ -4,7 +4,10 @@
     "checkJs": true,
     "target": "es5",
     "lib": ["es2015", "dom", "dom.iterable"],
-    "noImplicitAny": false
+    "noImplicitAny": true, // 암묵적으로 any 타입 가지는 것 허용 x
+    "strict": true, // 강한 type 정의
+    "strictFunctionTypes": true // 함수의 파라미터 타입이 반공변적으로 동작하도록 변경
+    // https://seob.dev/posts/%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80/
   },
   "include": ["./src/**/*"]
 }

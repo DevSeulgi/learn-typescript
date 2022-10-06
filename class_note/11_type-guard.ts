@@ -29,7 +29,9 @@ if((seulgi as Developer).skill){
 // 타입 가드 정의
 function isDeveloper(target: Developer | Person): target is Developer {
   return (target as Developer).skill !== undefined;
-}
+  // Developer는 skill 값이 포함되어 있기에 undefined 일 수 없음!
+  // 그러므로 해당 값으로 들어온 target은 Developer이다.
+} // true false로 값 도출
 
 if(isDeveloper(seulgi)) {
   console.log(seulgi.skill);
